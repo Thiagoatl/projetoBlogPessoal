@@ -11,8 +11,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.generation.blogpessoal.model.UsuarioLogin;
 import com.generation.blogpessoal.model.Usuario;
+import com.generation.blogpessoal.model.UsuarioLogin;
 import com.generation.blogpessoal.repository.UsuarioRepository;
 import com.generation.blogpessoal.security.JwtService;
 
@@ -38,7 +38,7 @@ public class UsuarioService {
 		return Optional.of(usuarioRepository.save(usuario));
 	
 	}
-	
+
 	public Optional<Usuario> atualizarUsuario(Usuario usuario) {
 		
 		if(usuarioRepository.findById(usuario.getId()).isPresent()) {
